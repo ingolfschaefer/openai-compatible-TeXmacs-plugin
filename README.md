@@ -14,23 +14,23 @@ Starting TeXmacs with plugin installed should give new session called "test py" 
 Just type your message to chat with the AI
 
 Special Commands:
-  /help               - Show this help
-  /config             - Show current configuration
-  /config key=value   - Change configuration (e.g., /config temperature=0.5)
-  /clear              - Clear conversation history
-  /history            - Show conversation summary
-  /model [name]       - Show/change model
-  /models             - List available models
-  /test               - Test API connection
-  /oneshot <msg>      - Single request without history
-  /system [prompt]    - Show/change system prompt
-  /hidethinking [0|1] - Hide <think> blocks (0=off, 1=on)
-  /latex [0|1]        - Convert Markdown to LaTeX via pandoc (0=off, 1=on)
+-  /help               - Show this help
+-  /config             - Show current configuration
+-  /config key=value   - Change configuration (e.g., /config temperature=0.5)
+-  /clear              - Clear conversation history
+-  /history            - Show conversation summary
+-  /model [name]       - Show/change model
+-  /models             - List available models
+-  /test               - Test API connection
+-  /oneshot <msg>      - Single request without history
+-  /system [prompt]    - Show/change system prompt
+-  /hidethinking [0|1] - Hide <think> blocks (0=off, 1=on)
+-  /latex [0|1]        - Convert Markdown to LaTeX via pandoc (0=off, 1=on)
 
 Configuration Keys:
   api_base, api_key, model, temperature, max_tokens, hidethinking, latex_output
 
 Examples:
-  /config model=gpt-4-turbo
-  /hidethinking 1
-  /latex 1
+-  /config model=gpt-4-turbo
+-  /hidethinking 1
+-  /latex 1
