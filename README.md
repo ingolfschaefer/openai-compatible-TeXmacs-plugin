@@ -1,17 +1,18 @@
 # openai-compatible-TeXmacs-plugin
 TeXmacs plugin for openAI compatible LLM servers
 
-<img width="1694" height="986" alt="grafik" src="https://github.com/user-attachments/assets/815a009d-ec8f-48f3-b00d-d5468d5e77a6" />
+<img width="2050" height="1170" alt="grafik" src="https://github.com/user-attachments/assets/f3f8c340-0bfe-4cea-ac48-89669b532345" />
+
 
 
 ## INSTALL
 1. Copy test_py folder into ~/.TeXmacs/plugins  location is hardcoded for alpha
 2. Python requirements:
-   needs packages: aiohttp (and optionally pypandoc)
-3. Optional for full formula support in plugin: Command line tool pandoc
+   needs packages: aiohttp (and optionally markdown-it-py mdit-plugins)
+3. You can change the server, default prompt, api-key and such by editing openai_config.json
 
 ## Start
-Starting TeXmacs with plugin installed should give new session called "test py" for now.
+Starting TeXmacs with plugin installed should give new session called "LLM plugin" for now.
 
 ## Basic Usage:
 Just type your message to chat with the AI
@@ -19,21 +20,13 @@ Just type your message to chat with the AI
 Special Commands:
 -  /help               - Show this help
 -  /config             - Show current configuration
--  /config key=value   - Change configuration (e.g., /config temperature=0.5)
 -  /clear              - Clear conversation history
 -  /history            - Show conversation summary
 -  /model [name]       - Show/change model
--  /models             - List available models
--  /test               - Test API connection
--  /oneshot <msg>      - Single request without history
--  /system [prompt]    - Show/change system prompt
 -  /hidethinking [0|1] - Hide <think> blocks (0=off, 1=on)
--  /latex [0|1]        - Convert Markdown to LaTeX via pandoc (0=off, 1=on)
-
-Configuration Keys:
-  api_base, api_key, model, temperature, max_tokens, hidethinking, latex_output
+-  /markdown [0|1]     - Parse Markdown output (0=off, 1=on)
 
 Examples:
--  /config model=gpt-4-turbo
+-  /model llama3.2
 -  /hidethinking 1
--  /latex 1
+-  /markdown 1
