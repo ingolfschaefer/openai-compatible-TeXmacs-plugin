@@ -2,8 +2,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; MODULE      : init-sympy.scm
-;; DESCRIPTION : Initialize the Test Py plugin
-;; COPYRIGHT   : (C) 2019  Darcy Shen
+;; DESCRIPTION : Initialize the LLM plugin
+;; COPYRIGHT   : (C) 2019  Darcy Shen, 2025 Ingolf Schäfer
 ;;
 ;; This software falls under the GNU general public license version 3 or later.
 ;; It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
@@ -17,18 +17,11 @@
         (string-append s "\n<EOF>\n"))))
 
 (define (test_py-launcher)
- ; (string-append (python-command) " \""
- ;                 "/home/ingolf/.TeXmacs/plugins/test_py/progs/tm_test_py.py\"")
-;   (display python-command)
- ; )
   (if (url-exists? "$TEXMACS_HOME_PATH/plugins/test_py")
       (string-append (python-command) " \""
                      (getenv "TEXMACS_HOME_PATH")
                      "/plugins/test_py/progs/tm_test_py.py\"")
-;      (string-append (python-command) " \""
-;                     (getenv "TEXMACS_HOME_PATH")
-;                     "/plugins/test_py/tm_test_py.py\"")))
-      (display "Falsch abgebogen")
+      (display "something went wrong")
       ))
 
 (plugin-configure test_py
@@ -36,4 +29,4 @@
   (:launch ,(test_py-launcher))
   (:serializer ,test_py-serialize)
   (:tab-completion #t)
-  (:session "Test Py"))
+  (:session "LLM plugin"))
