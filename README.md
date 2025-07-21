@@ -1,6 +1,9 @@
 # openai-compatible-TeXmacs-plugin
 TeXmacs plugin for openAI compatible LLM servers
 
+<img width="1694" height="986" alt="grafik" src="https://github.com/user-attachments/assets/815a009d-ec8f-48f3-b00d-d5468d5e77a6" />
+
+
 ## INSTALL
 1. Copy test_py folder into ~/.TeXmacs/plugins  location is hardcoded for alpha
 2. Python requirements:
